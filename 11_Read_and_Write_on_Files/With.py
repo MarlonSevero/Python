@@ -60,8 +60,7 @@ Aqui, `banco_conexao()` é uma função fictícia que retorna um objeto de conex
 `__enter__` abre a conexão e o método `__exit__` a fecha automaticamente.
 
 Essa abordagem torna o código mais robusto e fácil de manter, o que é uma das principais vantagens do uso da
-declaração `with` em Python.
-"""
+declaração `with` em Python.\
 
 with open('text.txt', 'w') as arq:
     while True:
@@ -71,5 +70,18 @@ with open('text.txt', 'w') as arq:
             arq.write('\n')
         else:
             break
+
+
+"""
+
+
+with open('text.txt', 'w') as arquivo:
+    itens = []
+    n = int(input("How many times do you want to write?"))
+    for x in range(0, n):
+        item_num = input("Informe o primeiro item da compra:")
+        itens.append(item_num)
+        arquivo.write(item_num)
+print(itens)
 
 
