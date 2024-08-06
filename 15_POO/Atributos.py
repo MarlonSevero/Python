@@ -54,18 +54,38 @@ Atributos representam as caractericas dos objetos.
             self.preco = preco
             self.valor = (valor + (valor * Produto.imposto))
 
-atributos Dinamico
+ps4 = Produto("Playstation 4", 2000, 1000)
+print(ps4.valor)
 
-"""
+    3- Atributos Dinamico : Um atributo de instancia que pode ser criado em tempo de execucao.
+        O atributo dinamico sera exclusivo da instancia que o criou.
 
-#REFATORANDO
+    class Produto:
 
-class Produto:
-
-    #Atributo de Classe
+    # Atributo de Classe
     imposto = 0.05
+    contador = 0
 
     def __init__(self, nome, preco, valor):
+        self.id = Produto.contador + 1
         self.nome = nome
         self.preco = preco
         self.valor = (valor + (valor * Produto.imposto))
+        Produto.contador = self.id
+
+
+ps4 = Produto("Playstation 4 Pro", 4000, 1000)
+ps4.peso = 10 # Atributo dinamico (nao recomendado)
+ps5 = Produto("Playstation 5 Pro", 8000, 2000)
+
+print(ps5.__dict__) # Dicionario contendo as informacoes do Classe
+print(Produto.__dict__)
+
+del ps4.valor #Deletando um atributo
+
+print(ps4.__dict__)
+
+"""
+
+
+
