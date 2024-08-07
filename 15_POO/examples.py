@@ -1,5 +1,4 @@
-
-
+"""
 class Carro:
     serial = 60060
 
@@ -25,3 +24,16 @@ ford_onix_10 = Carro("Ford", "Renauld 1.0", "Blue")
 print(ford_onix.serial)
 print(ford_onix_10.serial)
 ford_onix.turnon()
+#----------------------
+"""
+
+class Carro:
+    serial = 60060
+
+    def __init__(self, marc, modelo, cor):
+        self.serial = Carro.serial + 1
+        self.marc = marc
+        self.modelo = modelo
+        self.cor = cor
+        self.ligado = False
+        Carro.serial = self.serial
