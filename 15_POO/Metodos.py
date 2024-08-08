@@ -15,6 +15,9 @@ __init__ : O metodo dunder init e um metodo esopecialv chamado de construtor, e 
 
  OBS: Os metodos Dunder em Python, sao chamados de metodos magicos.
 
+Metodos de Classe
+
+
 
 """
 
@@ -52,37 +55,40 @@ class Produto:
 
 
 class Usuario:
+
+    @classmethod        #Metodo de Classe
+    def usercount(cls):
+        print(f'{cls.contador}')
+
+    @classmethod
+    def teste(cls):
+        print('teste')
+
+    @staticmethod
+    def codee():
+        return 'XRXS092'
+
+    contador = 0
+
     def __init__(self, name, second, mail, passwd):
-        self.name = name
-        self.second = second
-        self.mail = mail
-        self.passwd = crypt.hash(passwd)
+        self.__id = Usuario.contador + 1
+        self.__name = name
+        self.__second = second
+        self.__mail = mail
+        self.__passwd = crypt.hash(passwd)
+        Usuario.contador = self.__id
+        print(f'User {Usuario.__new_user(self)} created')
 
     def nome_completo(self):
-        return f'{self.name} {self.second}'
+        return f'{self.__name} {self.__second}'
 
     def check_passwd(self, passwd):
-        if crypt.verify(passwd, self.passwd):
+        if crypt.verify(passwd, self.__passwd):
             return True
         else:
             return exit(41)
+    def __new_user(self): #Metodo privado
+        return self.__mail.split('@')[0]
 
 
-name_user = input('NAME: ')
-secondname_user = input('SECOND NAME:')
-email = input('MAIL:')
-password = input('PASSWD')
-confim_password = input('CONFIRM PASSWD')
 
-if password == confim_password:
-    user = Usuario(name_user, secondname_user, email, password)
-else:
-    exit(41)
-print('USER CRIADO COM SUCESSO')
-print(user.__dict__)
-
-temp = input('informe a senha: ')
-if temp == True:
-    print('Login Efetuado com Sucesso!')
-else:
-    print('Falha no login')
