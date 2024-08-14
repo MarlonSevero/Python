@@ -1,0 +1,70 @@
+"""
+TIPO FLOAT
+
+TODAS AS OPERAÇÕES REALIZADAS NO TIPO NUMERICO SÃO POSSIVEIS AQUI TAMBEM
+
+REAL/DECIMAL -> TEM CASAS DECIMAIS
+
+OBS: O SEPARADOR DE CASAS DECIMAIS É O PONTO E NÃO A VIRGULA
+
+#ERRADO DO PONTO DE VISTA DO FLOAT, MAS GERA UMA TUPLA
+    NUM = 1, 44
+    print(NUM1)
+    print(type(NUM1))
+
+#CERTO DO PONTO DE VISTA FLOAT
+
+    NUM = 1.44
+    print(NUM2)
+    print(type(NUM))
+
+# É POSSIVEL FAZER DUPLA ATRIBUIÇÃO
+
+valor1, valor2 = 20, 30
+print(valor1)
+print(valor2)
+print(type(valor1))
+
+--OPERAÇÕES--
+
+NUM = 1.44
+NUM + 1
+NUM = 2.44
+
+OU
+
+NUM = 1.55
+NUM -=1
+NUM = 0.55
+
+# PODEMOS CONVERTER UM FLOAT EM UM INT
+AO CONVERTER VALORES FLOAT PARA INTEIROS NÓS PERDEMOS PRECISÃO
+
+num = 1.55
+res = int(num)
+print(res)
+
+# PODEMOS TRABALHAR COM NUMEROS COMPLEXOS
+VALORES DE NUMEROS COMPLEXOS (5j)
+
+valor = 5j
+print(type(valor))
+valor **= 2
+print(valor)
+
+# PODEMOS CONVERTER UM FLOAT NUM INTEIRO
+# PERDEMOS PRECISÃO TRANSFORMANDO FLOAT EM INTEIRO
+
+N = 2.56
+N2 = 3.67
+
+print(N+N2)
+print(int(N + N2))
+
+"""
+
+N = 2.56
+N2 = 3.67
+
+print(N+N2)
+print(int(N + N2))
