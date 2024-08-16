@@ -84,4 +84,3 @@ with open('text.txt', 'w') as arquivo:
         arquivo.write(item_num)
 print(itens)
 
-
