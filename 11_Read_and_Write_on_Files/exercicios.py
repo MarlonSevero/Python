@@ -22,9 +22,6 @@ for word in words:
 
 <<<<<
 
-"""
-
-import os
 
 vogais = []
 concoantes = []
@@ -39,3 +36,33 @@ with open('new_file', 'r') as file:
                 concoantes.append(letter)
 print(f'Existe {len(vogais)} vogais no arquivo')
 print(f'Existe {len(concoantes)} concocantes no arquivo')
+
+<<<<<<<
+
+
+
+"""
+
+import os
+"""
+
+#MANEIRA 1
+letters_count: int = 0
+with open('new_file', 'r') as file:
+    lines = file.readlines()
+    for line in lines:
+        for letter in line:
+            if letter == '\n':
+                letters_count += 1
+            elif letter == ' ':
+                letters_count += 1
+
+print(f'{letters_count}')
+"""
+
+#MANEIRA 2
+file : str = input('Informe qual arquivo deseja abrir:')
+with open(file, 'r') as file_read:
+    lines = file_read.readlines()
+
+print(f'The file has {len(lines)} lines')
