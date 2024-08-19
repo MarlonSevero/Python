@@ -18,7 +18,7 @@ os.mknod('new_file', 777) #MacOs ErrorPermition
 os.mkdir('/etc/new/newPath') #MacOs ErrorPermition, #Somente newPath criado
 os.makedirs('/etc/new/directory') #arvore de diretorios (mais de um) # Etc, new, direcotory criados
 os.makedirs('/etc/new/', exist_ok=False)
-os.rename('StringIO.py', 'NewStringIO') #Renomear pasta/diretorio, precisa estar vazio
+os.rename('6_StringIO.py', 'NewStringIO') #Renomear pasta/diretorio, precisa estar vazio
 os.rename('/etc/new/teste.txt', '/etc/newPath/teste.txt') #Renomeando arquivo
 os.remove('file.txt') #utilizado para remover arquivo.
 os.rmdir('random_path/another/one') # utilizado para remover diretorios [vazios]
